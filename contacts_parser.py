@@ -49,7 +49,7 @@ def parse_contacts() -> list[list]:
         driver.quit()
 
 
-def write_to_csv(path: str, data: list[list], delimiter: str = ';') -> None:
+def write_to_csv(path: str, data: list[list], delimiter: str = locators.CSV_DELIMITER) -> None:
     with open(path, 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile, delimiter=delimiter)
         csv_writer.writerows(data)
